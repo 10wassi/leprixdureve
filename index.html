@@ -258,6 +258,7 @@
             transition: var(--transition);
             border: 1px solid rgba(212, 175, 55, 0.1);
             height: 100%;
+            margin: 0 10px;
         }
 
         .prix-card:hover {
@@ -291,6 +292,11 @@
             z-index: 1;
             height: 100%;
             width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: rgba(212, 175, 55, 0.3);
         }
 
         .prix-card:hover .prix-image img {
@@ -313,51 +319,209 @@
             margin: 0;
             font-size: 0.95rem;
         }
+        
+        /* Styles pour le carrousel */
+        .prix-carousel-container {
+            position: relative;
+            padding: 0 50px;
+        }
+        
+        .prix-carousel .carousel-indicators {
+            bottom: -40px;
+        }
+        
+        .prix-carousel .carousel-indicators button {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgba(212, 175, 55, 0.3);
+            border: none;
+            margin: 0 5px;
+        }
+        
+        .prix-carousel .carousel-indicators button.active {
+            background-color: var(--primary-color);
+        }
+        
+        .carousel-control-prev, 
+        .carousel-control-next {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(212, 175, 55, 0.2);
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+        
+        .carousel-control-prev:hover, 
+        .carousel-control-next:hover {
+            background-color: var(--primary-color);
+            opacity: 1;
+        }
+        
+        .carousel-control-prev {
+            left: 0;
+        }
+        
+        .carousel-control-next {
+            right: 0;
+        }
+        
+        /* Ajustements responsive pour le carrousel */
+        @media (min-width: 768px) {
+            .carousel-item.active,
+            .carousel-item-next,
+            .carousel-item-prev {
+                display: flex;
+            }
+            
+            .carousel-inner {
+                overflow: visible;
+            }
+            
+            .carousel-item.active {
+                transform: translateX(0);
+            }
+        }
+        
+        /* Pour afficher plusieurs cards par slide */
+        .carousel-inner {
+            padding: 20px 0;
+        }
+        
+        .multi-card-slide .prix-card {
+            flex: 0 0 calc(33.333% - 20px);
+            max-width: calc(33.333% - 20px);
+        }
+        
+        @media (max-width: 992px) {
+            .multi-card-slide .prix-card {
+                flex: 0 0 calc(50% - 20px);
+                max-width: calc(50% - 20px);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .multi-card-slide .prix-card {
+                flex: 0 0 calc(100% - 20px);
+                max-width: calc(100% - 20px);
+            }
+        }
     </style>
     
     <div class="container">
         <span class="section-label">Reconnaissance</span>
-        <h2 class="section-title text-center mb-5 ">Prix & Distinctions</h2>
-        <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
-                <div class="prix-card">
-                    <div class="prix-image">
-                        <img src="assets/images/prix1.jpg" alt="Prix 1" class="img-fluid" onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';" onload="this.nextElementSibling.style.display='none';">
-                        <div class="image-placeholder" style="display: none;">🏆 Prix 1</div>
-                    </div>
-                    <div class="prix-content">
-                        <h5 class="prix-title">Prix du Meilleur Documentaire</h5>
-                        <p class="prix-description">Festival International du Film Documentaire - 2025</p>
-                    </div>
+        <h2 class="section-title text-center mb-5">Prix & Distinctions</h2>
+        
+        <!-- Carrousel avec les 6 distinctions -->
+        <div class="prix-carousel-container">
+            <div id="prixCarousel" class="carousel slide prix-carousel" data-bs-ride="carousel" data-bs-interval="5000">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#prixCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#prixCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#prixCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="prix-card">
-                    <div class="prix-image">
-                        <img src="assets/images/prix2.jpg" alt="Prix 2" class="img-fluid" onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';" onload="this.nextElementSibling.style.display='none';">
-                        <div class="image-placeholder" style="display: none;">🏆 Prix 2</div>
+                
+                <div class="carousel-inner">
+                    <!-- Slide 1 (Cards 1, 2, 3) -->
+                    <div class="carousel-item active multi-card-slide">
+                        <div class="d-flex justify-content-center gap-4">
+                            <!-- Card 1 -->
+                            <div class="prix-card">
+                                <div class="prix-image">
+                                    <img src="assets/images/prix1.jpg" alt="Prix du Meilleur Court Métrage" class="img-fluid" onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';" onload="this.nextElementSibling.style.display='none';">
+                                    <div class="image-placeholder">🏆</div>
+                                </div>
+                                <div class="prix-content">
+                                    <h5 class="prix-title">Prix du Meilleur Court Métrage</h5>
+                                    <p class="prix-description">Ant'Sary DOC Film Festival, Madagascar - 2025</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Card 2 -->
+                            <div class="prix-card">
+                                <div class="prix-image">
+                                    <img src="assets/images/prix2.jpg" alt="Meilleure Réalisation Documentaire" class="img-fluid" onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';" onload="this.nextElementSibling.style.display='none';">
+                                    <div class="image-placeholder">🎬</div>
+                                </div>
+                                <div class="prix-content">
+                                    <h5 class="prix-title">Meilleure Réalisation Documentaire</h5>
+                                    <p class="prix-description">Ciné 229, Bénin - 2025</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Card 3 -->
+                            <div class="prix-card">
+                                <div class="prix-image">
+                                    <img src="assets/images/prix6.jpg" alt="Meilleure Photographie Documentaire" class="img-fluid" onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';" onload="this.nextElementSibling.style.display='none';">
+                                    <div class="image-placeholder">📷</div>
+                                </div>
+                                <div class="prix-content">
+                                    <h5 class="prix-title">Meilleure Photographie Documentaire</h5>
+                                    <p class="prix-description">Ciné 229, Bénin - 2025</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="prix-content">
-                        <h5 class="prix-title">Prix du Public</h5>
-                        <p class="prix-description">Festival Cinéma Bénin - 2025</p>
+                    
+                    <!-- Slide 2 (Cards 4, 5, 6) -->
+                    <div class="carousel-item multi-card-slide">
+                        <div class="d-flex justify-content-center gap-4">
+                            <!-- Card 4 -->
+                            <div class="prix-card">
+                                <div class="prix-image">
+                                    <img src="assets/images/prix4.jpg" alt="Prix du Public" class="img-fluid" onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';" onload="this.nextElementSibling.style.display='none';">
+                                    <div class="image-placeholder">👑</div>
+                                </div>
+                                <div class="prix-content">
+                                    <h5 class="prix-title">Meilleur Son Documentaire</h5>
+                                    <p class="prix-description">Ciné 229, Bénin - 2025</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Card 5 -->
+                            <div class="prix-card">
+                                <div class="prix-image">
+                                    <img src="assets/images/prix5.jpg" alt="Meilleur Montage" class="img-fluid" onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';" onload="this.nextElementSibling.style.display='none';">
+                                    <div class="image-placeholder">🎥</div>
+                                </div>
+                                <div class="prix-content">
+                                    <h5 class="prix-title">Meilleur Montage</h5>
+                                    <p class="prix-description">Ciné 229, Bénin - 2025</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Card 6 -->
+                            <div class="prix-card">
+                                <div class="prix-image">
+                                    <img src="assets/images/prix6.jpg" alt="Coup de Cœur du Public" class="img-fluid" onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';" onload="this.nextElementSibling.style.display='none';">
+                                    <div class="image-placeholder">❤️</div>
+                                </div>
+                                <div class="prix-content">
+                                    <h5 class="prix-title">Coup de Cœur du Public</h5>
+                                    <p class="prix-description">Ciné 229, Bénin - 2025</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    
+                    <!-- Slide 3 optionnel si vous voulez montrer une seule card à la fois -->
+                    <!-- Supprimé car on veut 3 cards par slide -->
                 </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="prix-card">
-                    <div class="prix-image">
-                        <img src="assets/images/prix2.jpg" alt="Prix 3" class="img-fluid" onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';" onload="this.nextElementSibling.style.display='none';">
-                        <div class="image-placeholder" style="display: none;">🏆 Prix 3</div>
-                    </div>
-                    <div class="prix-content">
-                        <h5 class="prix-title">Mention Spéciale</h5>
-                        <p class="prix-description">Festival Panafricain du Cinéma - 2025</p>
-                    </div>
-                </div>
+                
+                <button class="carousel-control-prev" type="button" data-bs-target="#prixCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Précédent</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#prixCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Suivant</span>
+                </button>
             </div>
         </div>
     </div>
-
 </section>
 
    <!-- Note d'Intention Section -->
@@ -368,9 +532,12 @@
                 <h2 class="section-title text-center mb-5">Note d'Intention</h2>
                 <div class="note-content" style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.9;">
                     <blockquote class="blockquote-custom" style="border-left: 4px solid #C5A572; padding-left: 2rem; margin: 0; position: relative;">
-                        <p class="mb-4">"Le Prix du Rêve" est né d'une volonté de donner la parole à ces femmes qui, malgré les obstacles, ont choisi de suivre leurs aspirations. À travers leurs histoires, nous explorons non seulement leurs parcours individuels, mais aussi les enjeux plus larges de l'émancipation féminine dans notre société contemporaine.</p>
-                        <p class="mb-4">Chaque protagoniste de ce documentaire incarne une facette différente de la résilience et de la détermination. Leurs témoignages authentiques révèlent les sacrifices, les défis et les joies qui accompagnent la poursuite d'un rêve.</p>
-                        <p class="mb-4">Ce film est un hommage à toutes les femmes qui osent rêver et agir, et une invitation à réfléchir sur les traces que nous laissons dans le monde lorsque nous choisissons de vivre nos aspirations plutôt que de les abandonner.</p>
+                        <p class="mb-4">Dans de nombreuses sociétés africaines, le rôle de la femme est encore perçu à travers des prismes de domination et de soumission. Si l’on ajoute à cela la dévalorisation des métiers artistiques, notamment celui de cinéaste, nous obtenons un cocktail difficile à surmonter pour celles et ceux qui souhaitent y investir leur énergie et leur talent.</p>
+                        <p class="mb-4">Le Prix du Rêve  part d’un constat douloureux, mais réel : dans notre société béninoise ,  certaines femmes ont été battues parce qu’elles désiraient faire du cinéma. Elles ont été moquées, incomprises. Pourtant, elles ont tenu bon. Elles ont persévéré, malgré tout. Elles continuent de créer, de jouer, de rêver, parfois dans l’ombre, souvent dans la douleur. “Le Prix du Rêve” explore le parcours de femmes et d’hommes qui, malgré les jugements, les pressions sociales et les sacrifices, ont choisi de suivre leur passion pour le cinéma.</p>
+                        <p class="mb-4">Je ne prétends pas pouvoir parvenir à répondre à toutes les questions que les gens pourraient se poser, mais j’espère, à travers ce film, ouvrir un espace de dialogue et d’inspiration.</p>
+                        <p class="mb-4">
+En tant que jeune réalisatrice, moi-même issue d’un parcours où la passion pour le cinéma n’a pas toujours été comprise, je veux partager avec le public la force de ces récits et leur donner la place qu’ils méritent. « Le Prix du Rêve » est un hommage à celles et ceux qui ont choisi de croire en leur rêve, à ceux qui luttent chaque jour pour que leur art soit reconnu et qu’ils puissent en vivre, malgré les épreuves. “Le Prix du Rêve” est une invitation à croire en ses rêves, quel que soit le prix à payer.
+</p>
                         <footer class="blockquote-footer mt-4" style="color: #C5A572; font-style: italic; margin-top: 2rem;">
                             <cite style="font-weight: 600;">La Réalisatrice</cite>
                         </footer>
@@ -404,7 +571,7 @@
                             </div>
                             <div class="team-info">
                                 <h4>GOVE Olivia Solène Gamélé</h4>
-                                <p class="team-role">Réalisatrice & Productrice</p>
+                                <p class="team-role">Réalisatrice</p>
                                 <p class="team-desc">Visionnaire derrière le projet, Alice apporte une sensibilité unique aux récits africains contemporains.</p>
                             </div>
                         </div>
@@ -412,7 +579,7 @@
                     
                     <div class="swiper-slide">
                         <div class="team-card">
-                            <div class="team-image" style="background-image: url('assets/images/equipe2.jpg');">
+                            <div class="team-image" style="background-image: url('assets/images/tournage2.jpg');">
                                 <div class="team-overlay">
                                     <div class="social-links">
                                         <a href="#"><i class="fab fa-facebook"></i></a>
@@ -430,7 +597,7 @@
                     
                     <div class="swiper-slide">
                         <div class="team-card">
-                            <div class="team-image" style="background-image: url('assets/images/equipe1.jpg');">
+                            <div class="team-image" style="background-image: url('assets/images/son.jpeg');">
                                 <div class="team-overlay">
                                     <div class="social-links">
                                         <a href="#"><i class="fab fa-linkedin"></i></a>
@@ -448,7 +615,7 @@
                     
                     <div class="swiper-slide">
                         <div class="team-card">
-                            <div class="team-image" style="background-image: url('assets/images/equipe2.jpg');">
+                            <div class="team-image" style="background-image: url('assets/images/luc.jpeg');">
                                 <div class="team-overlay">
                                     <div class="social-links">
                                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -476,7 +643,7 @@
                             <div class="team-info">
                                 <h4>Hiris Production et Edition/ INMAAC </h4>
                                 <p class="team-role">Production</p>
-                                <p class="team-desc">Artisan du rythme, Marc tisse les plans avec une précision chirurgicale et une sensibilité rare.</p>
+                                <p class="team-desc">Chef d’orchestre du projet, elle veille à ce que chaque idée prenne vie avec fluidité, organisation et créativité.</p>
                             </div>
                         </div>
                         
@@ -521,7 +688,7 @@
                     <img src="assets/images/tournage1.jpg" alt="Tournage à l'université" loading="lazy">
                     <div class="galerie-overlay">
                         <div class="overlay-content">
-                            <h5>Tournage à l'UAC</h5>
+                            <h5>Tournage sur une plage à Cotonou</h5>
                             <p>Scènes capturées sur le campus universitaire</p>
                         </div>
                     </div>

@@ -427,7 +427,7 @@ function initVisualEffects() {
         
         text.split('').forEach((char, i) => {
             const span = document.createElement('span');
-            span.textContent = char === ' ' ? '&nbsp;' : char;
+            span.textContent = char === ' ' ? '\u00A0' : char;
             span.style.opacity = '0';
             span.style.display = 'inline-block';
             title.appendChild(span);
