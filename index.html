@@ -578,7 +578,6 @@
     <div class="container prix-container">
         <div class="text-center">
             <span class="section-tag">✨ Reconnaissance & Excellence ✨</span>
-            <h2 class="prix-title-main">Nos <span>Distinctions</span></h2>
             <p class="text-light-50 mb-5" style="color: rgba(255,255,255,0.7); max-width: 700px; margin-left: auto; margin-right: auto;">
                 Des récompenses qui témoignent de notre engagement et de notre excellence créative
             </p>
@@ -652,7 +651,7 @@
         <div class="prix-carousel-wrapper">
             <div class="prix-slider-title">
                 <span></span>
-                MOMENTS DE GLOIRE
+                
                 <span></span>
             </div>
             
@@ -747,7 +746,7 @@ En tant que jeune réalisatrice, moi-même issue d’un parcours où la passion 
     <section id="equipe" class="section-equipe">
         <div class="container">
             <div class="section-header text-center">
-                <span class="section-label">Création</span>
+                
                 <h2 class="section-title">Équipe Technique</h2>
                 <div class="section-line"></div>
             </div>
@@ -866,7 +865,7 @@ En tant que jeune réalisatrice, moi-même issue d’un parcours où la passion 
     <section id="galerie" class="section-galerie">
         <div class="container">
             <div class="section-header text-center">
-                <span class="section-label">Visuel</span>
+
                 <h2 class="section-title">Galerie</h2>
                 <div class="section-line"></div>
             </div>
@@ -898,21 +897,21 @@ En tant que jeune réalisatrice, moi-même issue d’un parcours où la passion 
                 </div>
                 
                 <div class="galerie-item portraits" data-index="2">
-                    <img src="assets/images/tournage2.jpg" alt="Portrait de Florisse" loading="lazy">
+                    <img src="assets/images/galerie.jpeg" alt="Portrait de Florisse" loading="lazy">
                     <div class="galerie-overlay">
                         <div class="overlay-content">
                             <h5></h5>
-                            <p>Moment d'introspection</p>
+                            <p>Entre détermination et vulnérabilité</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="galerie-item festivals" data-index="3">
-                    <img src="assets/images/gale.jpeg" alt="Cérémonie des prix" loading="lazy">
+                    <img src="assets/images/tournage2.jpg" alt="Cérémonie des prix" loading="lazy">
                     <div class="galerie-overlay">
                         <div class="overlay-content">
                             <h5></h5>
-                            <p>Collection d'images de nos projets</p>
+                            <p>Moment d'introspection</p>
                         </div>
                     </div>
                 </div>
@@ -928,21 +927,21 @@ En tant que jeune réalisatrice, moi-même issue d’un parcours où la passion 
                 </div>
                 
                 <div class="galerie-item portraits" data-index="5">
-                    <img src="assets/images/galerie.jpeg" alt="Portrait de Kismath" loading="lazy">
+                    <img src="assets/images/gal.jpeg" alt="Portrait de Kismath" loading="lazy">
                     <div class="galerie-overlay">
                         <div class="overlay-content">
                             <h5></h5>
-                            <p>Entre détermination et vulnérabilité</p>
+                            <p>Au travail</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="galerie-item festivals" data-index="6">
-                    <img src="assets/images/gal.jpeg" alt="Projection publique" loading="lazy">
+                    <img src="assets/images/gale.jpeg" alt="Projection publique" loading="lazy">
                     <div class="galerie-overlay">
                         <div class="overlay-content">
                             <h5></h5>
-                            <p>Au travail</p>
+                            <p>Image</p>
                         </div>
                     </div>
                 </div>
@@ -973,61 +972,611 @@ En tant que jeune réalisatrice, moi-même issue d’un parcours où la passion 
         </div>
     </div>
 
-    <!-- Contact Élégant -->
-    <section id="contact" class="section-contact">
-        <div class="container">
-            <div class="section-header text-center">
-                <span class="section-label">Contact</span>
-                <h2 class="section-title">Prenons Contact</h2>
-                <div class="section-line"></div>
-            </div>
+   <!-- Contact Élégant - Coordonnées -->
+<section id="contact" class="section-contact">
+    <style>
+        /* ============================================
+           Contact - Version Coordonnées Premium
+           ============================================ */
+        .section-contact {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #0a0f1e 0%, #1a1f2f 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section-contact::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+            animation: floatContact 20s infinite ease-in-out;
+        }
+        
+        .section-contact::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+            animation: floatContact 25s infinite ease-in-out reverse;
+        }
+        
+        @keyframes floatContact {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(5%, 5%) scale(1.1); }
+        }
+        
+        .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .section-label {
+            display: inline-block;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #C5A572;
+            background: rgba(212, 175, 55, 0.1);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            margin-bottom: 1rem;
+            border-left: 2px solid #C5A572;
+            border-right: 2px solid #C5A572;
+            backdrop-filter: blur(5px);
+        }
+        
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1rem;
+            text-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        .section-title span {
+            color: #C5A572;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title span::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #C5A572, transparent);
+        }
+        
+        .section-line {
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #C5A572, #C5A572, transparent);
+            margin: 1.5rem auto 2.5rem;
+            border-radius: 3px;
+        }
+        
+        /* Carte de contact premium */
+        .contact-card {
+            background: rgba(20, 25, 40, 0.8);
+            backdrop-filter: blur(15px);
+            border-radius: 30px;
+            padding: 3rem;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(212, 175, 55, 0.1) inset;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-card:hover {
+            border-color: rgba(212, 175, 55, 0.4);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6), 0 0 0 2px rgba(212, 175, 55, 0.2) inset;
+            transform: translateY(-10px);
+        }
+        
+        .contact-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.6s ease;
+            pointer-events: none;
+        }
+        
+        .contact-card:hover::before {
+            opacity: 1;
+        }
+        
+        /* Badge "Disponible" */
+        .contact-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(212, 175, 55, 0.15);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            font-size: 0.9rem;
+            color: #C5A572;
+        }
+        
+        .contact-badge .pulse {
+            width: 10px;
+            height: 10px;
+            background: #4CAF50;
+            border-radius: 50%;
+            position: relative;
+        }
+        
+        .contact-badge .pulse::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #4CAF50;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.7; }
+            70% { transform: scale(2); opacity: 0; }
+            100% { transform: scale(1); opacity: 0; }
+        }
+        
+        /* Grille des coordonnées */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin: 2.5rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.2rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 0;
+            background: linear-gradient(180deg, #C5A572, #ffd700);
+            transition: height 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            background: rgba(212, 175, 55, 0.05);
+            border-color: rgba(212, 175, 55, 0.3);
+            transform: translateY(-5px);
+        }
+        
+        .contact-item:hover::before {
+            height: 100%;
+        }
+        
+        .contact-icon {
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(212, 175, 55, 0.05));
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: #C5A572;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .contact-item:hover .contact-icon {
+            background: #C5A572;
+            color: #0a0f1e;
+            transform: rotate(5deg) scale(1.1);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+        }
+        
+        .contact-details {
+            flex: 1;
+        }
+        
+        .contact-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 0.3rem;
+        }
+        
+        .contact-value {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 0.2rem;
+            word-break: break-word;
+        }
+        
+        .contact-sub {
+            font-size: 0.9rem;
+            color: rgba(212, 175, 55, 0.7);
+        }
+        
+        .contact-value a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .contact-value a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: #C5A572;
+            transition: width 0.3s ease;
+        }
+        
+        .contact-value a:hover {
+            color: #C5A572;
+        }
+        
+        .contact-value a:hover::after {
+            width: 100%;
+        }
+        
+        /* Ligne de séparation décorative */
+        .contact-divider {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .contact-divider-line {
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+        }
+        
+        .contact-divider-icon {
+            color: #C5A572;
+            font-size: 1.2rem;
+            opacity: 0.7;
+        }
+        
+        /* Réseaux sociaux */
+        .social-section {
+            text-align: center;
+        }
+        
+        .social-title {
+            color: #fff;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+        
+        .social-link {
+            width: 55px;
+            height: 55px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #C5A572;
+            font-size: 1.5rem;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .social-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #C5A572;
+            transform: scale(0);
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+            z-index: 0;
+        }
+        
+        .social-link i {
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            border-color: #C5A572;
+            transform: translateY(-5px);
+        }
+        
+        .social-link:hover::before {
+            transform: scale(1);
+        }
+        
+        .social-link:hover i {
+            color: #0a0f1e;
+        }
+        
+        /* Horaires */
+        .hours-container {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            border: 1px dashed rgba(212, 175, 55, 0.3);
+        }
+        
+        .hours-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .hours-row:not(:last-child) {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .hours-day {
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .hours-day i {
+            color: #C5A572;
+            font-size: 0.8rem;
+        }
+        
+        .hours-time {
+            color: #C5A572;
+            font-weight: 600;
+        }
+        
+        /* Bouton d'action */
+        .contact-action {
+            text-align: center;
+            margin-top: 2.5rem;
+        }
+        
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            background: linear-gradient(135deg, #C5A572, #b49450);
+            color: #0a0f1e;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .contact-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.4);
+            background: linear-gradient(135deg, #b49450, #C5A572);
+        }
+        
+        .contact-btn:hover::before {
+            left: 100%;
+        }
+        
+        .contact-btn i {
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-btn:hover i {
+            transform: translateX(5px);
+        }
+        
+        /* Responsive */
+        @media (max-width: 576px) {
+            .section-title {
+                font-size: 2rem;
+            }
             
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="contact-form-wrapper">
-                        <form action="contact.php" method="POST" class="contact-form">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="name">Nom complet *</label>
-                                        <input type="text" id="name" name="name" required>
-                                        <div class="form-line"></div>
-                                    </div>
+            .contact-card {
+                padding: 1.5rem;
+            }
+            
+            .contact-value {
+                font-size: 1rem;
+            }
+            
+            .social-link {
+                width: 45px;
+                height: 45px;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+    
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-label">✧ Contact ✧</span>
+            <h2 class="section-title">Restons <span>Connectés</span></h2>
+            <div class="section-line"></div>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <!-- Carte de contact premium -->
+                <div class="contact-card">
+                    <!-- Badge de disponibilité -->
+                    <div class="contact-badge">
+                        <span class="pulse"></span>
+                        <span>Disponible pour échanger</span>
+                    </div>
+                    
+                    <!-- Coordonnées principales -->
+                    <div class="contact-grid">
+                        <!-- Téléphone -->
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <div class="contact-label">Téléphone</div>
+                                <div class="contact-value">
+                                    <a href="tel:+261341234567">+261 34 12 345 67</a>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="email">Adresse email *</label>
-                                        <input type="email" id="email" name="email" required>
-                                        <div class="form-line"></div>
-                                    </div>
+                                <div class="contact-sub">Disponible 24/7 sur rendez-vous</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Email -->
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <div class="contact-label">Email</div>
+                                <div class="contact-value">
+                                    <a href="mailto:contact@exemple.com">contact@exemple.com</a>
                                 </div>
+                                <div class="contact-sub">Réponse sous 24h</div>
                             </div>
+                        </div>
+                        
+                        <!-- Localisation -->
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <div class="contact-label">Adresse</div>
+                                <div class="contact-value">Lot IVT 123 Bis</div>
+                                <div class="contact-sub">BENIN, Cotonou</div>
+                            </div>
+                        </div>
+                        
+                        <!-- WhatsApp / Messagerie -->
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-details">
+                                <div class="contact-label">WhatsApp</div>
+                                <div class="contact-value">
+                                    <a href="https://wa.me/22943527237" target="_blank">+229 43 52 72 37</a>
+                                </div>
+                                <div class="contact-sub">Réponse instantanée</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Diviseur décoratif -->
+                    <div class="contact-divider">
+                        <span class="contact-divider-line"></span>
+                        <span class="contact-divider-icon">✦</span>
+                        <span class="contact-divider-line"></span>
+                    </div>
+                    
+                    <!-- Réseaux sociaux -->
+                    <div class="social-section">
+                        <h3 class="social-title">Suivez nos aventures</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                             
-                            <div class="form-group">
-                                <label for="subject">Sujet</label>
-                                <input type="text" id="subject" name="subject">
-                                <div class="form-line"></div>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="message">Message *</label>
-                                <textarea id="message" name="message" rows="5" required></textarea>
-                                <div class="form-line"></div>
-                            </div>
-                            
-                            <div class="form-footer">
-                                <p class="form-note">* Champs obligatoires</p>
-                                <button type="submit" class="submit-btn">
-                                    <span>Envoyer le message</span>
-                                    <i class="fas fa-paper-plane"></i>
-                                </button>
-                            </div>
-                        </form>
+                            <a href="#" class="social-link" target="_blank"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="social-link" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                    
+                   
+                    <!-- Bouton d'action -->
+                    <div class="contact-action">
+                        <a href="https://wa.me/22943527237" class="contact-btn">
+                            <span>Discutons de votre projet</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer class="footer">
